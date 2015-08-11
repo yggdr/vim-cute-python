@@ -22,12 +22,14 @@ syntax match pyNiceOperator ">=" conceal cchar=≥
 syntax match pyNiceOperator "!=" conceal cchar=≠
 
 syntax keyword pyNiceOperator sum conceal cchar=∑
+syntax keyword pyNiceOperator prod conceal cchar=∏
 syntax keyword pyNiceBuiltin all conceal cchar=∀
 syntax keyword pyNiceBuiltin any conceal cchar=∃
 syntax match pyNiceOperator "\<\%(math\.\)\?sqrt\>" conceal cchar=√
-syntax match pyNiceKeyword "\<\%(math\.\)\?pi\>" conceal cchar=π
+syntax match pyNiceKeyword "\<\%(math\.\|constant\.\|scipy\.constant\.\|\)\?pi\>" conceal cchar=π
 syntax match pyNiceOperator "\<\%(math\.\|\)ceil\>" conceal cchar=⌈
 syntax match pyNiceOperator "\<\%(math\.\|\)floor\>" conceal cchar=⌊
+syntax match pyNiceOperator "\<\%(constant\.\|scipy\.constant\.\|\)hbar\>" conceal cchar=ℏ
 
 syntax keyword pyNiceStatement int conceal cchar=ℤ
 syntax keyword pyNiceStatement float conceal cchar=ℝ
@@ -45,6 +47,8 @@ syntax keyword pyNiceBuiltin len conceal cchar=#
 
 syntax keyword pyNiceStatement lambda conceal cchar=λ
 syntax keyword pyNiceStatement None conceal cchar=∅
+syntax keyword pyNiceStatement return conceal cchar=⏎
+syntax keyword pyNiceRepeat for conceal cchar=∀
 
 hi link pyNiceOperator Operator
 hi link pyNiceStatement Statement
