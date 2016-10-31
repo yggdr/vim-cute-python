@@ -21,6 +21,7 @@ syntax match pyNiceOperator ">=" conceal cchar=≥
 syntax match pyNiceOperator "=\@<!===\@!" conceal cchar=≟
 syntax match pyNiceOperator "!=" conceal cchar=≠
 " syntax match pyNiceOperator "==" conceal cchar=≟
+syntax match pyNiceStatement "set()" conceal cchar=∅
 
 syntax keyword pyNiceOperator sum conceal cchar=∑
 syntax keyword pyNiceOperator prod conceal cchar=∏
@@ -36,7 +37,7 @@ syntax keyword pyNiceStatement int conceal cchar=ℤ
 syntax keyword pyNiceStatement float conceal cchar=ℝ
 syntax keyword pyNiceStatement complex conceal cchar=ℂ
 
-syntax match pyNiceOperator " \* " conceal cchar=∙
+syntax match pyNiceOperator " \* " conceal cchar=⋅
 syntax match pyNiceOperator " / " conceal cchar=÷
 " The following are special cases where it /may/ be okay to ignore PEP8
 syntax match pyNiceOperator "\( \|\)\*\*\( \|\)0\>" conceal cchar=⁰
